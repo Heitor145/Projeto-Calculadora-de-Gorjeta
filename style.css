@@ -31,19 +31,24 @@ header{
 main{
     background-color: var(--white);
     padding: 2rem;
+    border-radius: 2.5625rem 1.5625rem 0 0;
 }
 
-.conta{
+.conta,
+.gorjeta,
+.pessoas{
     margin-bottom: 2rem;
 }
 
-.conta label
-.gorjeta label{
+.conta label,
+.gorjeta label,
+.pessoas label{
     color: var(--green-500);
     font-weight: 700;
 }
 
-.conta div{
+.conta div,
+.pessoas div{
     margin-top: 0.4rem;
     background-color: var(--green-100);
     padding: 0.4rem 1.2rem;
@@ -53,7 +58,8 @@ main{
     border: 0.3125rem;
 }
 
-.conta input{
+.conta input,
+.pessoas input{
     border: none;
     text-align: right;
     width: 100%;
@@ -64,16 +70,17 @@ main{
     outline: none;
 }
 
-.conta input::placeholder{
+.conta input::placeholder,
+.pessoas input::placeholder{
     color: var(--green-300);
 }
 
-.conta:has(input:focus) div{
+.conta:has(input:focus) div,
+.pessoas:has(input:focus) div{
     outline: 2px solid var(--light-green);
 }
 
 .gorjeta div{
-    border: 1px solid red;
     margin-top: 1rem;
 
     display: grid;
@@ -81,6 +88,94 @@ main{
     gap: 1rem;
 }
 
+.gorjeta input{
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    text-align: center;
+    outline: none;
+    padding-block: 0.4rem;
+    border-radius: 0.3125rem;
+    background-color: var(--green-800);
+    color: var(--white);
+}
+
 .gorjeta #outra{
     width: 100%;
+    background-color: var(--green-100);
+    color: var(--green-300);
+}
+
+.gorjeta #outra::placeholder{
+    color: var(--green-300);
+}
+
+.pessoas #erro{
+    display: none;
+}
+
+.resultados{
+    background-color: var(--green-800);
+    border-radius: 0.9375rem;
+    padding: 1.5rem;
+}
+
+.resultados div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resultados p{
+    color: var(--green-400);
+    font-size: 0.8125rem;
+}
+
+.resultados p strong{
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.resultados div > strong{
+    color: var(--light-green);
+    font-size: 2rem;
+}
+
+.resultados .gorjeta-total{
+    margin-bottom: 1.25rem;
+}
+
+.resultados .total{
+    margin-bottom: 2rem;
+}
+
+.resultados button{
+    width: 100%;
+    background: var(--light-green);
+    border: none;
+    border-radius: 0.3125rem;
+    color: var(--green-300);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    padding-block: 0.5rem;
+}
+
+@media(min-width: 920px){
+    main{
+        display: flex;
+        gap: 3rem;
+        padding: 3rem;
+        border-radius: 1.5625rem;
+        max-width: 57.5rem;
+        margin-inline: auto;
+    }
+
+    main section {
+        width: 100%;
+    }
+
+    .gorjeta div{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

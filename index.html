@@ -34,13 +34,13 @@
                         <input type="button" value="15%">
                         <input type="button" value="25%">
                         <input type="button" value="50%">
-                        <input type="button" name="outra" id="outra" placeholder="Outra">
+                        <input type="number" name="outra" id="outra" placeholder="Outra">
                     </div>
                 </div>
 
                 <div class="pessoas">                    
                     <label for="pessoas">Quantidade de Pessoas</label>
-                    <p>Não pode ser zero</p>
+                    <p id="erro">Não pode ser zero</p>
                     <div>
                         <img src="./image/icon-person.svg" alt="icone da pessoa">
                         <input type="number" name="ccconta" id="pessoas" placeholder="0">
@@ -67,6 +67,8 @@
 
                 <strong>$ 0.00</strong>
             </div>
+
+            <button>Limpar</button>
           </section>
     </main>
 </body>
