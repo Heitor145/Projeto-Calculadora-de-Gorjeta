@@ -108,7 +108,7 @@ main{
 }
 
 .gorjeta .botao-ativo{
-    background-color: var;
+    background-color: var(--light-green);
     color: var(--green-800);
 }
 
